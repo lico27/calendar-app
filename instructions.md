@@ -18,7 +18,7 @@ SO THAT I can manage my time effectively
 
 The app should:
 
-* Display the current day at the top of the calender when a user opens the planner.
+<!-- * Display the current day at the top of the calender when a user opens the planner. -->
  
 * Present timeblocks for standard business hours when the user scrolls down.
  
