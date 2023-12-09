@@ -9,7 +9,8 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 10px;
 }
 
@@ -35,12 +36,17 @@ header {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  margin: 10px;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .past {
@@ -59,11 +65,13 @@ header {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .saveBtn i:hover {
