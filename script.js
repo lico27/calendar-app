@@ -1,6 +1,6 @@
 // Display today's date at top of calendar
 var dateToday = dayjs();
-$("#currentDay").text(dateToday.format("dddd, D MMMM YYYY"));
+$("#currentDay").text("Today is " + (dateToday.format("dddd, D MMMM YYYY")) + ". It is " + dateToday.format("h.ma") + ".");
 
 // select textarea by id
 // if current hour = id, add present class
@@ -19,19 +19,13 @@ $("textarea").each(function() {
   arrHours.push($(this).attr("id"));
 });
 
-console.log(arrHours);
-
 // Loop textarea IDs to change colour based on current time
 for (let i = 0; i < arrHours.length; i++) {
     if (arrHours[i] < currentTime) {
-        var now = $("#" + arrHours[i]).addClass("past");
+        var selectColor = $("#" + arrHours[i]).addClass("past");
     } else if (arrHours[i] == currentTime) {
-        var now = $("#" + arrHours[i]).addClass("present");
+        var selectColor = $("#" + arrHours[i]).addClass("present");
     } else {
-        var now = $("#" + arrHours[i]).addClass("future");
+        var selectColor = $("#" + arrHours[i]).addClass("future");
     }
 }
-    
-
-
-// get id then add new class
