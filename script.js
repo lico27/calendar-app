@@ -30,3 +30,17 @@ for (let i = 0; i < arrHours.length; i++) {
     }
 }
 
+// Function to set interval for save confirmation to display
+let savedMessageTime = function() {
+    $("#saveConfirm").text("Saved successfully");
+  }
+  
+// Add event listener to save button
+let saveButton = $(".saveBtn");
+
+saveButton.on('click', function() {
+   savedMessageTime();
+  });
+
+
+// Save textarea data to local storage

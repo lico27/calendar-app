@@ -19,7 +19,7 @@ The webpage can be viewed at https://lico27.github.io/calendar-app and the JavaS
 ![Screenshot of completed project](/screenshot.png) -->
 
 ## Credits
-Coded by Liam Cottrell.
+JavaScript coded by Liam Cottrell. HTML and CSS provided by edX Front-End Dev Bootcamp. 
 
 ## License
 Produced under the MIT license.
