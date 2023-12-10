@@ -1,6 +1,6 @@
 // Display today's date at top of calendar
 var dateToday = dayjs();
-$("#currentDay").text("Today is " + (dateToday.format("dddd, D MMMM YYYY")) + ". It is " + dateToday.format("h.ma") + ".");
+$("#currentDay").text("Today is " + (dateToday.format("dddd, D MMMM YYYY")) + ". It is " + dateToday.format("h.mma") + ".");
 
 // select textarea by id
 // if current hour = id, add present class
