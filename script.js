@@ -14,10 +14,15 @@ console.log("The hour is " + currentTime);
 
 // Get all textarea IDs
 let arrHours = [];
-
 $("textarea").each(function() {
   arrHours.push($(this).attr("id"));
 });
+
+// Get all save button IDs
+let arrBtns = [];
+$(".saveBtn").each(function() {
+    arrBtns.push($(this).attr("id"));
+  });
 
 // Loop textarea IDs to change colour based on current time
 for (let i = 0; i < arrHours.length; i++) {
@@ -30,17 +35,20 @@ for (let i = 0; i < arrHours.length; i++) {
     }
 }
 
+// Retrieve any saved data from local storage
+
 // Function to set interval for save confirmation to display
 let savedMessageTime = function() {
     $("#saveConfirm").text("Saved successfully");
   }
   
-// Add event listener to save button
-let saveButton = $(".saveBtn");
-
-saveButton.on('click', function() {
-   savedMessageTime();
+// Loop save button IDs to add event listener to save buttons
+for (let i = 0; i < arrBtns.length; i++) {
+    let saveButton = $(".saveBtn");
+    saveButton.on('click', function() {
+        localStorage.setItem("text", currentTime);
+        savedMessageTime();
   });
-
+}
 
 // Save textarea data to local storage
