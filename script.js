@@ -29,3 +29,4 @@ for (let i = 0; i < arrHours.length; i++) {
         var selectColor = $("#" + arrHours[i]).addClass("future");
     }
 }
+
