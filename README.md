@@ -1,4 +1,4 @@
-# calendar-app v1
+# calendar-app
 
 ## Description
 An app to manage each hour of the working day by adding and saving tasks to colour-coded sections.
@@ -21,8 +21,8 @@ The webpage can be viewed at https://lico27.github.io/calendar-app and the JavaS
 - Type your hourly plans, to-do list, notes, reminders etc. into the text box for the given hour
 - Click save
 
-<!-- ### Screenshot
-![Screenshot of completed project](/screenshot.png) -->
+### Screenshot
+![Screenshot of completed project](/screenshot.png)
 
 ## Credits
 JavaScript coded by Liam Cottrell. HTML and CSS provided by edX Front-End Dev Bootcamp. 
