@@ -2,11 +2,6 @@
 var dateToday = dayjs();
 $("#currentDay").text("Today is " + (dateToday.format("dddd, D MMMM YYYY")) + ". It is " + dateToday.format("h.mma") + ".");
 
-// select textarea by id
-// if current hour = id, add present class
-// if current hour > id, add past class
-// if current hour < id, add future class
-
 // Get current time as one digit
 let currentTime = dayjs();
 currentTime = parseInt(currentTime.format("H"));
@@ -18,11 +13,11 @@ $("textarea").each(function() {
   arrHours.push($(this).attr("id"));
 });
 
-// Get all save button IDs
+// Get all button IDs
 let arrBtns = [];
 $(".saveBtn").each(function() {
-    arrBtns.push($(this).attr("id"));
-  });
+  arrBtns.push($(this).attr("id"));
+});
 
 // Loop textarea IDs to change colour based on current time
 for (let i = 0; i < arrHours.length; i++) {
@@ -35,20 +30,19 @@ for (let i = 0; i < arrHours.length; i++) {
     }
 }
 
-// Retrieve any saved data from local storage
-
 // Function to set interval for save confirmation to display
 let savedMessageTime = function() {
     $("#saveConfirm").text("Saved successfully");
   }
-  
-// Loop save button IDs to add event listener to save buttons
-for (let i = 0; i < arrBtns.length; i++) {
-    let saveButton = $(".saveBtn");
-    saveButton.on('click', function() {
-        localStorage.setItem("text", currentTime);
-        savedMessageTime();
-  });
-}
 
-// Save textarea data to local storage
+for (let i = 0; i < arrHours.length; i++) {
+    let currentHour = arrHours[i];
+    var currentSave = $("#btn" + currentHour);
+    let currentText = $("#" + currentHour);
+    let currentStored = JSON.parse(localStorage.getItem(currentHour + "am"));
+    currentText.text(currentStored);
+    currentSave.on('click', function() {
+        localStorage.setItem(currentHour + "am", JSON.stringify(currentText.val()));
+        savedMessageTime();
+    });
+};
