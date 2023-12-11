@@ -35,6 +35,10 @@ header {
   padding: 15px 0px 5px 0px;
 }
 
+.hide {
+  display: none;
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;

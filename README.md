@@ -9,13 +9,13 @@ An app to manage each hour of the working day by adding and saving tasks to colo
   - Total number of months -->
 TBC
 
-## Installation
+### Installation
 No installation required.
 
-<!-- ## Usage
+### Usage
 The webpage can be viewed at https://lico27.github.io/calendar-app and the JavaScript can be viewed in the repository at /script.js.
 
-### Screenshot
+<!-- ### Screenshot
 ![Screenshot of completed project](/screenshot.png) -->
 
 ## Credits

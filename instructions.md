@@ -28,7 +28,7 @@ The app should:
 
 * Save the event in local storage when the save button is clicked in that timeblock.
 
-* Persist events between refreshes of a page
+<!-- * Persist events between refreshes of a page -->
 
 The following animation demonstrates the application functionality:
 
