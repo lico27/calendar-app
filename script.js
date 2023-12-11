@@ -31,7 +31,7 @@ let savedMessageTime = function() {
 // Loop to retrieve from/push to local storage and make save buttons functional
 for (let i = 0; i < arrHours.length; i++) {
     let currentHour = arrHours[i];
-    var currentSave = $("#btn" + currentHour);
+    let currentSave = $("#btn" + currentHour);
     let currentText = $("#" + currentHour);
     let currentStored = JSON.parse(localStorage.getItem(currentHour + "hr"));
     currentText.text(currentStored);
